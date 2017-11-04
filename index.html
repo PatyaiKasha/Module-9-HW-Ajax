@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Ajax class work. w3.org.ua</h1>
+        <p>Задание 1. Передайте на сервер два числа методом POST. Имена чисел – num1 и num2. Цель — файл a1.php. Если все выполнено верно, то будет возвращена строка с суммой чисел, если нет – ошибка. Способ передачи – AJAX.</p>
+        <button class="task-1">task-1</button>
+        <hr>
+        <p>Задание 2. Передайте на сервер свой год рождения в формате XXXX. Передачу осуществляйте методом POST, имя переменной year, имя целевого файла – a2.php. Если все выполнено верно, то сервер вернет строку в которой будет количество прожитых лет, если нет – ошибку. Способ передачи – AJAX.</p>
+        <button class="task-2">task-2</button>
+        <hr>
+        <p>Задание 3. Создайте форму с radiobutton для выбора пола (мужчина или женщина). Добавьте поле для ввода роста (в сантиметрах). По нажатию кнопки “Идеальный вес”, пошлите запрос на файл a3.php. На сервер передается параметр пол – имя параметра sex, значения man или woman и рост ( имя height). Передача осуществляется методом AJAX, с помощью POST. Если все выполнено правильно, то будет возвращена строка с расчетом идеального веса под заданный пол. В противном случае – ошибка.</p>
+        <input id="male" type="radio" name="sex" value="man" checked>
+        <label for="male">Male</label>
+        <input id="female" type="radio" name="sex" value="woman">
+        <label for="female">Female</label>
+        <input id="height1" type="number" name="" value="190">
+        <button class="idealWeight1">Ideal Weight INPUT</button>
+        <hr>
+        <p>Задание 4. Измените предыдущее значение, чтобы рост задавался с помощью ползунка range.</p>
+        <input id="height2" type="range" min="100" max="300" name="" value="100"><span id="rangeW"></span>
+        <br>
+        <button class="idealWeight2">Ideal Weight RANGE</button>
+        <hr>
+        <p>Задание 5. Создайте форму с полями:
+            <ul>
+                <li>fio – поле ввода для имени и фамилии;</li>
+                <li>email – поле ввода для email адреса;</li>
+                <li>phone – поле ввода для телефона;</li>
+            </ul> По нажатию кнопки передайте данные из полей ввода на сервер (mail.php) посредством POST (AJAX). Имена переменных – такие, как указано в списке. Если все сделано верно, то по адресу указанному в файле mail.php в переменной $to будет отправлено письмо, если нет – выведена ошибка. Возвращаемый формат – строка.</p>
+        <input id="fio" type="text" value="Pavel Viznytsia">
+        <input id="mail" type="email" value="viznitsap@gmail.com">
+        <input id="phone" type="tel" value="+38(095)123-45-67">
+        <button class="task-5">POST ...</button>
+        <hr>
+        <p>Задание 6. Пошлите на сервер (goods.php) методом GET артикул товара (art). Сервер реагирует только на 2 артикула (1 или 2). Если все выполнено верно то сервер пришлет вам JSON строку с описанием товара. После раскодировки (JSON.parse) вы сможете вывести поля:
+            <ul>
+                <li>name – имя товара;</li>
+                <li>weight – вес товара;</li>
+                <li>cost – стоимость товара;</li>
+                <li>img – ссылка на картинку;</li>
+            </ul>
+        </p>
+        <input id="g1" value="1" type="radio" name="goods" checked>
+        <label for="g1">Goods #1</label>
+        <input id="g2" value="2" type="radio" name="goods">
+        <label for="g2">Goods #2</label>
+        <button class="task-6">Take a goods</button>
+        <p class="out6"></p>
+    </div>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
